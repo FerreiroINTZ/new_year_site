@@ -3,8 +3,6 @@ import style from "./timer.module.css"
 
 const Card = ({label, date}) =>{
 
-    const dataFinal = '2026-0-0'
-
     const newDate = date
 
     useEffect(()=>{
@@ -27,8 +25,6 @@ const Card = ({label, date}) =>{
 function timer() {
 
     const times = ["dias", "horas", "minutos", "segundos"]
-
-    const finalDate = '2026-0-0'
     
     const [currentDate, setCurrentDate] = useState([0, 0, 0, 0])
 

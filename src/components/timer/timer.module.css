@@ -1,11 +1,9 @@
 #timer{
     padding: 20px 0px 50px 0px;
-    position: relative;
     background: linear-gradient(45deg, #23243F, #313255);
     width: 100%;
-    z-index: 2;
-    top: -50px;
     box-shadow: 0px -2px 12px 0px rgb(0, 0, 0, .25);
+    color: var(--white);
 
     #text{
         text-align: center;
