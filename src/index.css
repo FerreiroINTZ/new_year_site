@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+  --gold: #D0B751;
+  --deepBlue: #121328;
+  --grey: #303030;
+  --white: #D9D9D9;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background: #101010;
+  color: white;
+}
