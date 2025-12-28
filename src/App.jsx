@@ -8,6 +8,7 @@ function App() {
       <Hero/>
       <Timer />
       <Quiz1 />
+      <Quiz1 side={true}/>
     </>
   )
 }

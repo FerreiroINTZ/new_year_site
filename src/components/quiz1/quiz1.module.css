@@ -9,6 +9,21 @@
         line-height: 60px;
     }
 
+    #title2{
+        text-align: end;
+
+        #nome{
+            font-size: 60px;
+            color: var(--yellow);
+        }
+
+        #leter2025pt2{
+            color: var(--yellow);
+            font-weight: 800;
+            font-size: 50px;
+        }
+    }
+
     #leter2025{
         color: var(--yellow);
         font-size: 56px;

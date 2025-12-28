@@ -1,6 +1,18 @@
 import style from "./quiz1.module.css"
 
-function quiz1() {
+const Title1 = ({nome}) =>{
+    return(
+        <h3 id={style.title1}>Como foi o <span id={style.leter2025}>2025</span> de <br /> <span id={style.userName}>{nome}</span></h3>
+    )
+}
+
+const Title2 = ({nome}) =>{
+    return(
+        <h3 id={style.title2}>O que <span id={style.nome}>{nome}</span> <br />mais fez em <span id={style.leter2025pt2}>2025</span></h3>
+    )
+}
+
+function quiz1({side}) {
 
     const nome = "Gabriel Felipe"
     const opt = "sfddfdfdfd"
@@ -9,8 +21,10 @@ function quiz1() {
 
   return (
     <section id={style.quiz1}>
-        <h3>Como foi o <span id={style.leter2025}>2025</span> de <br /> <span id={style.userName}>{nome}</span></h3>
-        <div id={style.contentWrapper}>
+        {side ? <Title2 nome={nome}/> : <Title1 nome={nome}/>}
+        <div
+            style={{flexDirection: side ? "row-reverse" : "row"}} 
+            id={style.contentWrapper}>
             <div id={style.card}>
                 <p>{opt.toUpperCase()}</p>
                 <img src="/icons/boxing.png" alt="nada" />
