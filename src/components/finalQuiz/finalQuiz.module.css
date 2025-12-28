@@ -1,0 +1,95 @@
+#finalQuiz{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 200px;
+    margin-top: 140px;
+    /* background: red; */
+
+    #title{
+        display: flex;
+        justify-content: space-between;
+        font-size: 50px;
+        font-weight: 600;
+        /* background: red; */
+
+        #nome{
+            font-size: 60px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        #word_2026{
+            font-size: 125px;
+            color: var(--gold)
+        }
+    }
+
+    #card{
+        margin-top: 0px;
+        border-top: 4px solid #3D3F61;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        padding: 30px 0px;
+        background: linear-gradient(
+            45deg, 
+            #1E203C,
+            #121328 12%,
+            #15162D 70%,
+            #20223F 100%);
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            background: linear-gradient(
+                -45deg,
+                #CEAC23,
+                #E6C43A 7%,
+                #BA9B1E 34%,
+                #CEAC23 48%,
+                #F9DA5F 73%,
+                #C7A625 85%,
+                #CEAC23 100%
+            );
+            transform: rotate(-45deg);
+        }
+        
+        &::after{
+            height: 30px;
+            right: -40px;
+            bottom: 40px;
+        }
+
+        &::before{
+            height: 50px;
+            right: -85px;
+            bottom: 0px;
+            /* background: radial-gradient(red 50%, blue 50%); */
+        }
+
+        p{
+            color: var(--white);
+            font-size: 70px;
+            font-weight: 900;
+            background: linear-gradient(
+                45deg, 
+                #E0E0E0,
+                #EAEAEA 16%,
+                #C0C0C0 29%,
+                #E0E0E0 44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        img{
+            margin-top: 30px;
+            /* background: red; */
+        }
+    }
+}
