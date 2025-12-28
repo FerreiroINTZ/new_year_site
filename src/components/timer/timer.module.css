@@ -1,0 +1,95 @@
+#timer{
+    padding: 20px 0px 50px 0px;
+    position: relative;
+    background: linear-gradient(45deg, #23243F, #313255);
+    width: 100%;
+    z-index: 2;
+    top: -50px;
+    box-shadow: 0px -2px 12px 0px rgb(0, 0, 0, .25);
+
+    #text{
+        text-align: center;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    #time{
+        /* background: red; */
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        span{
+            font-size: 100px;
+            font-weight: 900;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+        
+        .singleTime{
+            /* background: blue; */
+            
+            p{
+                font-size: 34px;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            .singlNumber{
+                margin-top: 10px;
+                display: flex;
+                gap: 15px;
+                
+                div{
+                    text-align: center;
+                    width: fit-content;
+                    color: #242424;
+                    font-size: 80px;
+                    font-weight: 900;
+                    background: #D9D9D9;
+                    padding: 20px 30px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    #text2{
+        margin-top: 40px;
+        display: grid;
+        height: fit-content;
+        justify-items: center;
+        text-align: center;
+        /* background: red; */
+
+        p{
+            font-size: 50px;
+            font-weight: 600;
+            line-height: 50px;
+            width: fit-content;
+            color: #D9D9D9; 
+        }
+
+        h2{
+            font-size: 175px;
+            line-height: 125px;
+            font-weight: 900;
+            margin-top: 20px;
+            width: fit-content;
+            background: linear-gradient(
+                45deg,
+                #E0C246,
+                #FFE166 13%,
+                #CAAC2F 25%,
+                #E0C246 36%,
+                #E0C246 60%,
+                #D4B430 72%,
+                #FFE887 85%,
+                #E0C246 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

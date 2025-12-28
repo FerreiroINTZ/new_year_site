@@ -14,9 +14,9 @@ const rotas = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <Context>
       <RouterProvider router={rotas} />
-    </Context>
-  </StrictMode>,
+    </Context>,
+  {/* </StrictMode>, */}
 )

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     background: #171832;
+    position: relative;
     max-height: 100svh;
     min-height: 100svh;
     overflow: hidden;
