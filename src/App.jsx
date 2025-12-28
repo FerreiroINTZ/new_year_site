@@ -1,14 +1,18 @@
 import Hero from "./components/hero/hero"
 import Timer from "./components/timer/timer"
-import Quiz1 from "./components/quiz1/quiz1"
+import Quiz from "./components/quiz/quiz"
+import CTA1 from "./components/cta/cta"
 
 function App() {
   return (
     <>
       <Hero/>
       <Timer />
-      <Quiz1 />
-      <Quiz1 side={true}/>
+      {/* quiz 1 */}
+      <Quiz />
+      <CTA1 />
+      {/* quiz 2 */}
+      <Quiz side={true}/>
     </>
   )
 }
