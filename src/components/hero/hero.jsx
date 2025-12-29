@@ -15,7 +15,7 @@ function hero() {
                 <p id={style.texto}>"{texto}"</p>
             </div>
         </div>
-        {/* <Fireworks 
+        <Fireworks 
             options={{
                 intensity: 10,
                 opacity: 1,
@@ -29,8 +29,9 @@ function hero() {
                 top: "0px",
                 left: "0px",
                 width: "100%",
-                height: "100%"}}
-        /> */}
+                height: "100%",
+                "z-index": 1}}
+        />
     </section>
   )
 }

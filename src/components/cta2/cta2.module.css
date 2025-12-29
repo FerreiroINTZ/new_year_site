@@ -54,17 +54,20 @@
         }
         
         #aboveText{
+            display: inline-block;
+            line-height: 30px;
+            margin-top: 20px;
+            font-size: 24px;
+            color: var(--deepBlue);
+            font-weight: 600;
+            /* background: blue; */
+            
+            span{
+                color: var(--yellow);
+                font-weight: 900;
                 font-size: 24px;
-                color: var(--deepBlue);
-                font-weight: 600;
-                background: blue;
-    
-                span{
-                    color: var(--yellow);
-                    font-weight: 900;
-                    font-size: 24px;
-                    margin: 0px;
-                };
+                margin: 0px;
+            };
         }
 
 }

@@ -19,6 +19,7 @@ function App() {
       <FinalQuiz />
       <FinalPhrase />
       <Cta2 />
+      <div id='footer'></div>
     </>
   )
 }
