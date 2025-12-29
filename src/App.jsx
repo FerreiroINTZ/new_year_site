@@ -3,6 +3,7 @@ import Timer from "./components/timer/timer"
 import Quiz from "./components/quiz/quiz"
 import CTA1 from "./components/cta/cta"
 import FinalQuiz from "./components/finalQuiz/finalQuiz"
+import FinalPhrase from "./components/finalPhrase/finalPhrase"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* quiz 2 */}
       <Quiz side={true}/>
       <FinalQuiz />
+      <FinalPhrase />
     </>
   )
 }
