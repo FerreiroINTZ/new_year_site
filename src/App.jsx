@@ -4,6 +4,7 @@ import Quiz from "./components/quiz/quiz"
 import CTA1 from "./components/cta/cta"
 import FinalQuiz from "./components/finalQuiz/finalQuiz"
 import FinalPhrase from "./components/finalPhrase/finalPhrase"
+import Cta2 from "./components/cta2/cta2"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Quiz side={true}/>
       <FinalQuiz />
       <FinalPhrase />
+      <Cta2 />
     </>
   )
 }
