@@ -1,0 +1,134 @@
+#finalQuiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0px clamp(15px, 13vw, 200px);
+    margin-top: clamp(80px, 20vw, 140px);
+    /* background: red; */
+
+    @media(max-width: 600px){
+        &{
+            margin: 0px clamp(15px, 3vw, 200px);
+        }
+    }
+
+    #title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-style: italic;
+        font-size: clamp(27px, 7vw, 50px);
+        font-weight: 600;
+        width: fit-content;
+        color: var(--deepBlue);
+        position: relative;
+
+            &::before, &::after{
+                content: '?';
+                position: absolute;
+                font-size: 60px !important;
+                /* background: red; */
+            }
+
+            &::after{
+                rotate: -13deg;
+                top: 0px;
+                left: -60px;
+            }
+
+            &::before{
+                rotate: 13deg;
+                bottom: 30px;
+                right: 0px;
+            }
+        
+        @media(max-width: 600px){
+            &{
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #word_2026{
+            font-size: clamp(100px, 25vw, 125px);
+            color: var(--gold)
+        }
+    }
+
+    #card{
+        margin-top: 0px;
+        border-top: 4px solid #3D3F61;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        padding: 30px 0px;
+        background: linear-gradient(
+            45deg, 
+            #1E203C,
+            #121328 12%,
+            #15162D 70%,
+            #20223F 100%);
+        width: 100%;
+        height: clamp(400px, 100vw, 500px);
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            background: linear-gradient(
+                -45deg,
+                #CEAC23,
+                #E6C43A 7%,
+                #BA9B1E 34%,
+                #CEAC23 48%,
+                #F9DA5F 73%,
+                #C7A625 85%,
+                #CEAC23 100%
+            );
+            transform: rotate(-45deg);
+        }
+        
+        &::after{
+            height: 30px;
+            right: -40px;
+            bottom: 40px;
+        }
+
+        &::before{
+            height: 50px;
+            right: -85px;
+            bottom: 0px;
+            /* background: radial-gradient(red 50%, blue 50%); */
+        }
+
+        input{
+            color: var(--white);
+            font-size: clamp(40px, 11vw, 70px);
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(
+                45deg, 
+                #E0E0E0,
+                #EAEAEA 16%,
+                #C0C0C0 29%,
+                #E0E0E0 44%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+
+        img{
+            width: clamp(200px, 60vw, 315px);
+            height: auto;
+            margin-top: clamp(10px, 2vw, 30px);
+            /* background: red; */
+        }
+    }
+}
