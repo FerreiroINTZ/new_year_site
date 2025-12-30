@@ -7,29 +7,47 @@
 
     #text{
         text-align: center;
-        font-size: 26px;
+        font-size: clamp(20px, 5vw, 26px);
         font-weight: 800;
     }
 
     #time{
-        /* background: red; */
         margin-top: 40px;
         display: flex;
         justify-content: center;
         gap: 10px;
+        /* background: red; */
+
+        @media(max-width: 600px){
+            &{
+                display: grid;
+                justify-items: center;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+                .hidden span{
+                    display: none;
+                    background: red;
+                }
+            }
+        }
 
         span{
-            font-size: 100px;
+            font-size: clamp(60px, 20vw, 100px);
             font-weight: 900;
             align-self: flex-end;
             margin-bottom: 10px;
         }
+
+        #cardContainer{
+            display: flex;
+            /* background: blue; */
+        }
         
         .singleTime{
-            /* background: blue; */
             
             p{
-                font-size: 34px;
+                font-size: clamp(20px, 5vw, 34px);
                 font-weight: 800;
                 text-align: center;
             }
@@ -43,10 +61,10 @@
                     text-align: center;
                     width: fit-content;
                     color: #242424;
-                    font-size: 80px;
+                    font-size: clamp(40px, 10vw, 80px);
                     font-weight: 900;
                     background: #D9D9D9;
-                    padding: 20px 30px;
+                    padding: clamp(8px, 2vw, 20px) clamp(15px, 3vw, 30px);
                     border-radius: 5px;
                 }
             }
@@ -54,7 +72,7 @@
     }
 
     #text2{
-        margin-top: 40px;
+        margin-top: clamp(20px, 5vw, 40px);
         display: grid;
         height: fit-content;
         justify-items: center;
@@ -62,16 +80,17 @@
         /* background: red; */
 
         p{
-            font-size: 50px;
+            font-size: clamp(30px, 9vw, 50px);
             font-weight: 600;
             line-height: 50px;
             width: fit-content;
             color: #D9D9D9; 
+            /* background: red; */
         }
 
         h2{
-            font-size: 175px;
-            line-height: 125px;
+            font-size: clamp(100px, 30vw, 175px);
+            line-height: clamp(74px, 14vw, 125px);
             font-weight: 900;
             margin-top: 20px;
             width: fit-content;
@@ -88,6 +107,12 @@
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @media(max-width: 600px){
+                &{
+                    margin: 0px;
+                }
+            }
         }
     }
 }

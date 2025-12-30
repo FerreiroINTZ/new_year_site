@@ -58,10 +58,10 @@ function timer() {
         <p id={style.text}>O tempo não para<br/>Um novo ciclo está chegando</p>
         <div id={style.time}>
             {times.map((x, index) =>
-            <React.Fragment key={index}>
+            <div id={style.cardContainer} className={index == 2 ? style.hidden : "" } key={index}>
                 {index && <span>:</span>}
                 <Card date={currentDate[index]} key={index} label={x}/>
-            </React.Fragment>
+            </div>
             )}
         </div>
         <div id={style.text2}>

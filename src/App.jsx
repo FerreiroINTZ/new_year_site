@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Hero/>
-      {/* <Timer /> */}
+      <Timer />
       {/* quiz 1 */}
       {/* <Quiz /> */}
       {/* <CTA1 /> */}
