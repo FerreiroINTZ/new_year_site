@@ -97,9 +97,9 @@
         }
 
         img{
-            width: clamp(200px, 1vw, 315px);
+            width: clamp(200px, 60vw, 315px);
             height: auto;
-            margin-top: clamp(10px, 1vw, 30px);
+            margin-top: clamp(10px, 2vw, 30px);
             /* background: red; */
         }
     }

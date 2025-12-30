@@ -1,35 +1,48 @@
 #finalPhrase{
     /* background: red; */
-    margin-top: 140px;
+    margin-top: clamp(80px, 20vw, 140px);
 
     #title{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         /* background: blue; */
         text-align: center;
-        line-height: 50px;
-        font-size: 56px;
+        line-height: clamp(30px, 9vw, 50px);
+        font-size: clamp(30px, 9vw, 56px);
 
         #titleContent{
             position: relative;
             /* background: red; */
+            
+            @media(max-width: 600px){
+                &::after{
+                    content: URL("/public/icons/slwSmaller.png") !important;
+                    position: absolute;
+                    top: -15px !important;
+                    /* left: 100%; */
+                    right: 0px !important;
+                    left: auto !important;
+                    /* left: 0px !important; */
+                }
+            }
 
             &::after{
                 content: URL("/public/icons/slw.png");
                 position: absolute;
                 top: 60%;
                 left: 102%;
+
             }
             &::before{
                 content: '😉';
                 rotate: -13deg;
                 position: absolute;
                 bottom: 70%;
-                right: 100%;
+                left: clamp(-20px, -5vw, -60px);
             }
             
             span{
-                font-size: 80px;
+                font-size: clamp(40px, 11vw, 80px);
                 color: var(--yellow);
                 font-weight: 800;
                 /* background: red; */
@@ -41,13 +54,19 @@
     #content{
         position: relative;
         margin: 0px 300px;
-        margin-top: 50px;
+        margin-top: clamp(20px, 5vw, 50px) !important;
         /* background: greenyellow; */
-        font-size: 40px;
+        font-size: clamp(24px, 5vw, 40px);
         text-align: center;
         font-weight: 400;
         color: var(--deepBlue);
         font-style: italic;
+
+        @media(max-width: 600px){
+            &{
+                margin: 0px 15px;
+            }
+        }
 
         &::after{
             content: var(--userName);
