@@ -16,7 +16,7 @@ function App() {
       <CTA1 />
       {/* quiz 2 */}
       <Quiz side={true}/>
-      {/* <FinalQuiz /> */}
+      <FinalQuiz />
       {/* <FinalPhrase /> */}
       {/* <Cta2 /> */}
       {/* <div id='footer'></div> */}

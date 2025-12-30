@@ -4,7 +4,7 @@
     margin-top: clamp(80px, 14vw, 120px);
     
     h3{
-        font-size: clamp(30px, 1vw, 46px);
+        font-size: clamp(30px, 9svw, 46px);
         color: var(--deepBlue);
         line-height: clamp(34px, 9vw, 60px);
     }
@@ -14,7 +14,7 @@
         font-size: clamp(28px, 7vw, 46px);
 
         #nome{
-            font-size: clamp(28px, 1vw, 60px);
+            font-size: clamp(28px, 7vw, 60px);
             color: var(--yellow);
         }
 
@@ -55,7 +55,7 @@
             position: relative;
             padding: clamp(34px, 10vw, 60px) 0px;
             background: grey;
-            min-width: clamp(280px, 1vw, 425px);
+            min-width: clamp(280px, 80vw, 425px);
             height: clamp(350px, 80vw, 500px);
             background: var(--deepBlue);
             border-radius: 10px;
@@ -135,7 +135,7 @@
             }
 
             #cardText{
-                font-size: clamp(20px, 1vw, 36px);
+                font-size: clamp(20px, 5vw, 36px);
                 margin-top: 20px;
                 /* background: blue; */
 
