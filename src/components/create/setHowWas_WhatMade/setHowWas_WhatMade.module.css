@@ -29,6 +29,7 @@
         grid-template-columns: 1fr auto 1fr;
         gap: 40px;
         /* background: blue; */
+        margin-top: 20px;
 
         .cardWrapper{
             
