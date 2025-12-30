@@ -18,8 +18,8 @@ function App() {
       <Quiz side={true}/>
       <FinalQuiz />
       <FinalPhrase />
-      {/* <Cta2 /> */}
-      {/* <div id='footer'></div> */}
+      <Cta2 />
+      <div id='footer'></div>
     </>
   )
 }
