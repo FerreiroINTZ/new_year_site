@@ -13,9 +13,9 @@ function App() {
       <Timer />
       {/* quiz 1 */}
       <Quiz />
-      {/* <CTA1 /> */}
+      <CTA1 />
       {/* quiz 2 */}
-      {/* <Quiz side={true}/> */}
+      <Quiz side={true}/>
       {/* <FinalQuiz /> */}
       {/* <FinalPhrase /> */}
       {/* <Cta2 /> */}
