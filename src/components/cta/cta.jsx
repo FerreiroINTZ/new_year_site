@@ -7,7 +7,7 @@ function cta() {
   return (
     <div id={style.cta1}>
         <Pt1 />
-        {/* <Pt2 /> */}
+        <Pt2 />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 #cta1{
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: clamp(60px, 20vw, 150px);
     margin-top: clamp(50px, 14vw, 200px);
     /* background: red; */
 
@@ -55,23 +55,29 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: clamp(15px, 3vw, 20px);
         /* background: pink; */
 
+        @media(max-width: 600px){
+                #br{
+                    display: none;
+                }
+            }
+
         p{
-            font-size: 60px;
+            font-size: clamp(32px, 9vw, 60px);
             color: var(--deepBlue);
             font-weight: 900;
-            line-height: 60px;
+            line-height: clamp(32px, 9vw, 60px);
 
             #word_criar{
                 color: var(--yellow);
-                font-size: 64px;
+                font-size: clamp(36px, 10vw, 66px);
             }
 
             #word_retrospectiva{
                 color: var(--yellow);
-                font-size: 66px;
+                font-size: clamp(36px, 10vw, 66px);
             }
         }
 
@@ -79,8 +85,9 @@
             background: var(--deepBlue);
             color: var(--white);
             font-weight: 800;
-            width: 400px;
-            font-size: 40px;
+            width: clamp(280px, 80vw, 400px);
+            text-wrap: nowrap;
+            font-size: clamp(26px, 6vw, 40px);
             padding: 20px 40px;
             border-radius: 10px;
             border: none;
