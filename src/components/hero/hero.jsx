@@ -1,21 +1,24 @@
 import style from "./hero.module.css"
 import Fireworks from "@fireworks-js/react"
 
+import { useRef } from "react"
 
 function hero() {
 
     const texto = "Lorem ipsum dolor sit amet consectetur. Ut proin id morbi nulla vitae a fermentum"
+
+    const r = useRef(false)
 
   return (
     <section id={style.hero}>
         <div id={style.textWrapper}>
             <p>{"Gabrieil Felipe"} <span>mandou</span></p>
             <div id={style.title}>
-                <h1>FELIZ ANO NOVO</h1>
+                <h1>FELIZ <span>ANO NOVO</span></h1>
                 <p id={style.texto}>"{texto}"</p>
             </div>
         </div>
-        <Fireworks 
+        { r.current && <Fireworks
             options={{
                 intensity: 10,
                 opacity: 1,
@@ -31,7 +34,7 @@ function hero() {
                 width: "100%",
                 height: "100%",
                 "z-index": 1}}
-        />
+        />}
     </section>
   )
 }

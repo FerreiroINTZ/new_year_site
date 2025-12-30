@@ -41,34 +41,63 @@
         p{
             /* position: relative; */
             width: fit-content;
-            font-size: 60px;
+            font-size: clamp(40px, 7vw, 60px);
             left: -50px;
             font-weight: 600;
             /* background: red; */
+
+            @media(max-width: 600px){
+                &{
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 40px;
+                    text-align: center;
+                }
+            }
     
             span{
-                font-size: 40px;
+                font-size: clamp(30px, 1vw, 40px);
                 font-weight: 500;
             }
         }
     
         h1{
-            --fontSize: 100px;
+            --fontSize: clamp(50px, 15vw, 100px);
             font-size: var(--fontSize);
             line-height: var(--fontSize);
             width: fit-content;
             color: var(--gold);
             font-weight: 900;
             /* background: blue; */
+            
+            span{
+                font-size: var(--fontSize);
+            }
+
+            @media(max-width: 600px){
+                &{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: 15px;
+                }
+            }
         }
     
         #texto{
-            font-size: 35px;
+            font-size: clamp(24px, 5vw, 35px);
+            line-height: clamp(34px, 10vw, 48px);
             font-weight: 600;
-            width: 800px;
+            width: clamp(280px, 80vw, 700px);
             text-align: center;
             justify-self: center;
             margin-top: 25px;
+
+            @media(max-width: 600px){
+                &{
+                    margin-top: 40px;
+                }
+            }
             /* background: red; */
         }
     }

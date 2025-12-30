@@ -10,16 +10,16 @@ function App() {
   return (
     <>
       <Hero/>
-      <Timer />
+      {/* <Timer /> */}
       {/* quiz 1 */}
-      <Quiz />
-      <CTA1 />
+      {/* <Quiz /> */}
+      {/* <CTA1 /> */}
       {/* quiz 2 */}
-      <Quiz side={true}/>
-      <FinalQuiz />
-      <FinalPhrase />
-      <Cta2 />
-      <div id='footer'></div>
+      {/* <Quiz side={true}/> */}
+      {/* <FinalQuiz /> */}
+      {/* <FinalPhrase /> */}
+      {/* <Cta2 /> */}
+      {/* <div id='footer'></div> */}
     </>
   )
 }
