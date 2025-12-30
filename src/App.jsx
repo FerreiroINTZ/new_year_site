@@ -1,10 +1,10 @@
-import Hero from "./components/hero/hero"
-import Timer from "./components/timer/timer"
-import Quiz from "./components/quiz/quiz"
-import CTA1 from "./components/cta/cta"
-import FinalQuiz from "./components/finalQuiz/finalQuiz"
-import FinalPhrase from "./components/finalPhrase/finalPhrase"
-import Cta2 from "./components/cta2/cta2"
+import Hero from "./components/view/hero/hero"
+import Timer from "./components/view/timer/timer"
+import Quiz from "./components/view/quiz/quiz"
+import CTA1 from "./components/view/cta/cta"
+import FinalQuiz from "./components/view/finalQuiz/finalQuiz"
+import FinalPhrase from "./components/view/finalPhrase/finalPhrase"
+import Cta2 from "./components/view/cta2/cta2"
 
 function App() {
   return (

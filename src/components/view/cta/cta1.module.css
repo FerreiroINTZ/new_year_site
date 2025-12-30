@@ -24,7 +24,7 @@
                 display: block;
                 position: absolute;
                 content: '?';
-                font-size: clamp(50px, 1vw, 90px);
+                font-size: clamp(50px, 30vw, 90px);
                 width: fit-content;
                 height: fit-content;
             }
@@ -88,13 +88,22 @@
             width: clamp(280px, 80vw, 400px);
             text-wrap: nowrap;
             font-size: clamp(26px, 6vw, 40px);
-            padding: 20px 40px;
             border-radius: 10px;
             border: none;
             position: relative;
             cursor: pointer;
             overflow: hidden;
             transition: .3s;
+            
+            a{
+                display: inline-block;
+                /* background: red; */
+                min-width: 100%;
+                height: 100%;
+                padding: 20px 40px;
+                text-decoration: none;
+                color: inherit;
+            }
 
             &:hover{
                 transform: scale(1.025);

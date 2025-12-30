@@ -1,0 +1,61 @@
+#title{
+    display: grid;
+    justify-items: center;
+    /* background: red; */
+    text-align: center;
+    margin-top: 100px;
+
+    h1{
+        position: relative;
+        font-size: 60px;
+        color: var(--deepBlue);
+        line-height: 60px;
+
+        &::before, &::after{
+            content: '😉';
+            position: absolute;
+        }
+        
+        &::after{
+            content: '📱';
+            font-size: 50px;
+            bottom: -20px;
+            right: -70px;
+            rotate: 13deg;
+        }
+        
+        &::before{
+            content: '😉';
+            font-size: 50px;
+            top: -10px;
+            left: -40px;
+            rotate: -13deg;
+        }
+
+
+        span{
+            font-size: 80px;
+            color: var(--yellow);
+        }
+    }
+
+    #subTitle{
+        margin-top: 10px;
+        /* background: blue; */
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--deepBlue);
+
+        span{
+            color: var(--yellow);
+        }
+    }
+
+    #aviso{
+        margin-top: 40px;
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--deepBlue);
+        width: 30%;
+    }
+}
