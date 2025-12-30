@@ -12,7 +12,7 @@ function App() {
       <Hero/>
       <Timer />
       {/* quiz 1 */}
-      {/* <Quiz /> */}
+      <Quiz />
       {/* <CTA1 /> */}
       {/* quiz 2 */}
       {/* <Quiz side={true}/> */}

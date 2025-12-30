@@ -1,19 +1,19 @@
 #quiz1{
     /* background: red; */
-    margin: 0px 150px;
-    margin-top: 120px;
+    margin: 0px clamp(20px, 7vw, 150px);
+    margin-top: clamp(80px, 14vw, 120px);
     
     h3{
-        font-size: 46px;
+        font-size: clamp(30px, 1vw, 46px);
         color: var(--deepBlue);
-        line-height: 60px;
+        line-height: clamp(34px, 9vw, 60px);
     }
 
     #title2{
         text-align: end;
 
         #nome{
-            font-size: 60px;
+            font-size: clamp(30px, 1vw, 60px);
             color: var(--yellow);
         }
 
@@ -26,29 +26,36 @@
 
     #leter2025{
         color: var(--yellow);
-        font-size: 56px;
+        font-size: clamp(30px, 9vw, 56px);
         font-weight: 600;
     }
 
     #userName{
         color: var(--yellow);
-        font-size: 80px;
+        font-size: clamp(40px, 10vw, 80px);
     }
 
     #contentWrapper{
         display: flex;
-        margin-top: 40px;
+        margin-top: clamp(20px, 5vw, 40px);
+        /* background: red; */
+
+        @media(max-width: 600px){
+            &{
+                display: grid;
+            }
+        }
 
         #card{
             display: flex;
-            gap: 60px;
+            gap: clamp(40px, 10vw, 60px);
             flex-direction: column;
             align-items: center;
             position: relative;
             padding: 60px 0px;
             background: grey;
-            min-width: 425px;
-            height: 500px;
+            min-width: clamp(280px, 1vw, 425px);
+            height: clamp(350px, 80vw, 500px);
             background: var(--deepBlue);
             border-radius: 10px;
             border-top: 5px solid #3D3F61;
@@ -60,7 +67,7 @@
                 bottom: 0px;
                 right: -28%;
                 width: 100%;
-                height: 30px;
+                height: clamp(20px, 5vw, 30px);
                 transform: rotate(-45deg);
                 background: #23243F;
                 box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, .25);
@@ -72,15 +79,20 @@
                 bottom: 0px;
                 right: -50%;
                 width: 100%;
-                height: 50px;
+                height: clamp(35px, 10vw, 50px);
                 transform: rotate(-45deg);
                 background: #23243F;
             }
             
             p{
                 color: var(--white);
-                font-size: 40px;
+                font-size: clamp(30px, 9vw, 40px);
                 font-weight: 900;
+            }
+
+            img{
+                width: clamp(160px, 50vw, 250px);
+                height: auto;
             }
         }
 
@@ -107,17 +119,28 @@
             }
 
             #depoimento, #cardText{
-                font-size: 36px;
+                font-size: clamp(20px, 5vw, 36px);
                 font-weight: 600;
                 width: 60%;
                 height: fit-content;
                 text-align: center;
                 color: var(--deepBlue);
+
+                @media(max-width: 600px){
+                    &{
+                        width: 100%;
+                    }
+                }
             }
 
             #cardText{
-                font-size: 36px;
+                font-size: clamp(20px, 1vw, 36px);
                 margin-top: 20px;
+                /* background: blue; */
+
+                @media(max-width: 600px){
+                    margin-top: 30px;
+                }
             }
         }
     }
