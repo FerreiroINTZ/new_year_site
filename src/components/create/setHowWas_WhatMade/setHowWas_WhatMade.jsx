@@ -3,21 +3,16 @@ import style from "./setHowWas_WhatMade.module.css"
 import Title1 from "./opts/title/title1"
 import Title2 from "./opts/title/title2"
 
+import { useContext } from "react"
+import {Context} from "../context"
+
 import Card from "./card"
 
 // import hardIcon from "../../../../public/icons/boxing.png"
 
 function SetHowWas_WhatMade({opt}) {
 
-    const dados1 = [
-        {icon: "/public/icons/boxing.png", label: "Dificil"},
-        {icon: "/public/icons/boxing.png", label: "Disilinado"},
-        {icon: "/public/icons/boxing.png", label: "Tagico"},
-        {icon: "/public/icons/boxing.png", label: "Faci"},
-        {icon: "/public/icons/boxing.png", label: "Faci"},
-        {icon: "/public/icons/boxing.png", label: "Faci"},
-        {icon: "/public/icons/boxing.png", label: "Faci"},
-    ]
+    const {qz1Opts, qz2Opts, setInfos} = useContext(Context) 
 
     const dados2 = [
         {icon: "/public/icons/boxing.png", label: "Assitindo Filmes"},
@@ -38,18 +33,16 @@ function SetHowWas_WhatMade({opt}) {
                 <p className={style.cardTitle}><span>escolha</span> uma <br />das opcoes</p>
                 <ul>
                     {!opt 
-                        ? dados1.map((x, index) =>
+                        ? qz1Opts.current.map((x, index) =>
                             (<Card
                                 key={index}
-                                icon={x.icon}
-                                label={x.label}
+                                label={x}
                                 opt={opt}/>)
                             )
-                        : dados2.map((x, index) =>
+                        : qz2Opts.current.map((x, index) =>
                             <Card
                                 key={index}
-                                icon={x.icon}
-                                label={x.label}
+                                label={x}
                                 opt={opt}/>
                             )
                     }
@@ -58,7 +51,9 @@ function SetHowWas_WhatMade({opt}) {
             <hr />
             <div className={style.cardWrapper}>
                 <p className={style.cardTitle}><span>descreva</span> em <br />poucas palavras</p>
-                <textarea></textarea>
+                <textarea 
+                    name={!opt ? "qz1" : "qz2"}
+                    onChange={e => setInfos(e.target)}></textarea>
             </div>
         </div>
     </section>
