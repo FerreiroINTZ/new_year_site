@@ -13,6 +13,7 @@ function setHero() {
           diga uma frase de <br /><span>FELIZ ANO NOVO!</span>
         </h2>
         <div id={style.writeContanier}>
+          <span id={style.faixas}></span>
           <span id={style.boxIcon}>
             <img src="/public/icons/partyIcon.png" alt="" />
           </span>
