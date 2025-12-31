@@ -6,8 +6,8 @@ export const Context = createContext()
 function ContxtComponent({children}){
 
     const [hableToSend, setHableToSend] = useState(false)
-    const [shareLink, setShareLink] = useState("")
-    const [shareLinkContainer, setShareLinkContainer] = useState(false)
+    const [shareLink, setShareLink] = useState("http://localhost:5173/?d=N4IgdghgtgpiBcIBmBnAJqjIA0IAWMATgPYIhoqZI4gCOAXgIxnpU0MBMLGr79AzNza40MAA54ySCsJDExAFxQIA2iAAiMFBCQBLCGmKEaAURQKAroYs4wFgDb2AugF8gA")
+    const [shareLinkContainer, setShareLinkContainer] = useState(true)
 
     const infosMolde = {
         name: "",

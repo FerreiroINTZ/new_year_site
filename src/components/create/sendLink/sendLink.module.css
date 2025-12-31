@@ -11,9 +11,75 @@
 
     #card{
         background: #f0f0f0;
-        padding: 30px;
+        padding: 50px 80px;
         border-radius: 10px;
         width: 80%;
         height: 80%;
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color: var(--deepBlue);
+
+            span{
+                font-size: 60px;
+                color: var(--yellow);
+            }
+        }
+        
+        #linkWrapper{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            a{
+                display: inline-block;
+                font-weight: 800;
+                text-decoration: none;
+                width: fit-content;
+                font-size: 40px;
+                /* background: red; */
+            }
+        }
+
+        #actionsBtnsWrapper{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            /* background: red; */
+
+            button{
+                padding: 20px 40px;
+                font-size: 30px;
+                font-weight: 900;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover{
+                    transform: scale(1.025);
+                    box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, .25);
+                }
+            }
+
+            #editBtn{
+                background: var(--deepBlue);
+                color: white;
+            }
+
+            #coppyBtn{
+                background: var(--gold);
+                color: white;
+            }
+
+            #shareBtn{
+                background: #77e477;
+                color: white;
+            }
+        }
+
     }
 }
