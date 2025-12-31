@@ -7,6 +7,8 @@ import SetHowWas_WhatMade from "./components/create/setHowWas_WhatMade/setHowWas
 import WhatExpect from "./components/create/whatExpect/whatExpect"
 import SetFinalDeph from "./components/create/setFinalDepth/setFInalDepth"
 import SendSection from "./components/create/sendSection/sendSection"
+import SendLink from "./components/create/sendLink/sendLink"
+import ReloadAlert from "./components/create/reloadWarning"
 
 function create() {
   return (
@@ -19,6 +21,8 @@ function create() {
         <WhatExpect />
         <SetFinalDeph />
         <SendSection />
+        <SendLink />
+        <ReloadAlert />
     </Context>
   )
 }

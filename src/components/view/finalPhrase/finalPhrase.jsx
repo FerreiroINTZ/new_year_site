@@ -2,7 +2,7 @@ import style from "./finalPhrase.module.css"
 
 import Title from "./title"
 
-function finalPhrase() {
+function finalPhrase({texto}) {
 
   const depoimento = "Lorem ipsum dolor sit amet consectetur. Arcu et lorem ut aliquam semper quis gravida viverra eu. Aenean nam turpis vitae enim eu vel ipsum. Dui gravida libero ultrices libero ipsum ac est"
 
@@ -14,7 +14,7 @@ function finalPhrase() {
       <div 
         id={style.content}
         style={{"--userName": `'${nome}'`}}>
-        "{depoimento}"
+        "{texto}"
       </div>
     </section>
   )

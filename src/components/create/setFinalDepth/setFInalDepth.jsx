@@ -18,7 +18,7 @@ function setFInalDepth() {
             <img src="/public/icons/crown.png" alt="" />
           </span>
           <textarea
-            name="depth"
+            name="deph"
           onChange={e => setInfos(e.target)}>
           </textarea>
         </div>

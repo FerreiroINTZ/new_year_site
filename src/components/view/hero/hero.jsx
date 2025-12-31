@@ -3,19 +3,17 @@ import Fireworks from "@fireworks-js/react"
 
 import { useRef } from "react"
 
-function hero() {
-
-    const texto = "Lorem ipsum dolor sit amet consectetur. Ut proin id morbi nulla vitae a fermentum"
+function hero({nome, text}) {
 
     const r = useRef(false)
 
   return (
     <section id={style.hero}>
         <div id={style.textWrapper}>
-            <p>{"Gabrieil Felipe"} <span>mandou</span></p>
+            <p>{nome} <span>mandou</span></p>
             <div id={style.title}>
                 <h1>FELIZ <span>ANO NOVO</span></h1>
-                <p id={style.texto}>"{texto}"</p>
+                <p id={style.texto}>"{text}"</p>
             </div>
         </div>
         { r.current && <Fireworks

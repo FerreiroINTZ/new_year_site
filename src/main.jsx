@@ -4,12 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import Create from './create.jsx'
 
+import ContextComp from "./components/view/contxt.jsx"
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const rotas = createBrowserRouter([
   {
     path: "/",
-    element: (<App />)
+    element: (<ContextComp><App /></ContextComp>)
   },
   {
     path: "criar",

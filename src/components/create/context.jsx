@@ -1,8 +1,13 @@
-import { createContext, useRef, useEffect, useReducer } from "react"
+import { createContext, useRef, useEffect, useReducer, useState } from "react"
+import LZString from "lz-string"
 
 export const Context = createContext()
 
 function ContxtComponent({children}){
+
+    const [hableToSend, setHableToSend] = useState(false)
+    const [shareLink, setShareLink] = useState("")
+    const [shareLinkContainer, setShareLinkContainer] = useState(false)
 
     const infosMolde = {
         name: "",
@@ -10,7 +15,7 @@ function ContxtComponent({children}){
         qz1: "",
         qz2: "",
         qz3: "",
-        depth: "",
+        deph: "",
         opts: [null, null, null]
     }
 
@@ -33,6 +38,22 @@ function ContxtComponent({children}){
 
     const [infos, setInfos] = useReducer(chageInfos, infosMolde)
 
+    // verifica se todos os campos ja foram feitos
+    useEffect(() =>{
+        console.log(infos)
+        const keys = Object.keys(infos)
+        const notFilled = keys.filter(x => infos[x])
+        console.log("notFilled: ")
+        console.log(keys.length)
+        console.log(notFilled.length)
+        if(notFilled.length >= keys.length){
+            console.warn("sdsds")
+            setHableToSend(true)
+        }else{
+            setHableToSend(false)
+        }
+    }, [infos])
+
     const qz1Opts = useRef([
         "Desafiador",
         "Chato",
@@ -52,9 +73,8 @@ function ContxtComponent({children}){
         "Estudou",
         "Trabalhou",
         "Comemorou",
-        // "Saiu",
         "Comeu",
-        "Fez algo novo",
+        // "Fez algo novo",
         "Jogou Esportes",
         "Assistiu Filmes",
         "Namorou",
@@ -63,12 +83,26 @@ function ContxtComponent({children}){
         "Jogou Video Game",
     ])
 
-    useEffect(() =>{
-        console.log(infos)
-    }, [infos])
+    function createSite(){
+        if(!hableToSend){
+            return
+        }
+
+        // trasnforma o objeo em string
+        let link = JSON.stringify(infos)
+        // comprime ele
+        link = LZString.compressToEncodedURIComponent(link)
+        // encode ela para URL
+        // link = encodeURIComponent(link)
+        // monta o URL
+        link = `${window.location.host}?d=${link}`
+        setShareLinkContainer(true)
+        setShareLink(link)
+        console.log("FInal!")
+    }
 
     return(
-        <Context.Provider value={{name: infos.name, setInfos, qz1Opts, qz2Opts}}>
+        <Context.Provider value={{name: infos.name, setInfos, qz1Opts, qz2Opts, hableToSend, createSite, shareLinkContainer, setShareLinkContainer, shareLink}}>
             {children}
         </Context.Provider>
     )

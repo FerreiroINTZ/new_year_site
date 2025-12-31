@@ -12,9 +12,8 @@ const Title2 = ({nome}) =>{
     )
 }
 
-function quiz1({side}) {
+function quiz1({side, nome, texto1, texto2}) {
 
-    const nome = "Gabriel Felipe"
     const opt = "sfddfdfdfd"
     const depoimnto = "Lorem ipsum dolor sit amet consectetur. Tellus id sapien feugiat egestas lacus facilisi turpis neque"
     const depoOpt = "Lorem ipsum dolor sit amet consectetur. Tellus id sapien feugiat egestas lacus facilisi turpis neque."
@@ -30,7 +29,7 @@ function quiz1({side}) {
                 <img src="/icons/boxing.png" alt="nada" />
             </div>
             <div id={style.text}>
-                <p style={{"--userName": `'${nome}'`}} id={style.depoimento}>"{depoimnto}"</p>
+                <p style={{"--userName": `'${nome}'`}} id={style.depoimento}>"{side ? `${texto2}` : `${texto1}`}"</p>
                 <p id={style.cardText}>{depoOpt}</p>
             </div>
         </div>
