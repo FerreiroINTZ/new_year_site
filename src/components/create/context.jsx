@@ -7,7 +7,7 @@ function ContxtComponent({children}){
 
     const [hableToSend, setHableToSend] = useState(false)
     const [shareLink, setShareLink] = useState("http://localhost:5173/?d=N4IgdghgtgpiBcIBmBnAJqjIA0IAWMATgPYIhoqZI4gCOAXgIxnpU0MBMLGr79AzNza40MAA54ySCsJDExAFxQIA2iAAiMFBCQBLCGmKEaAURQKAroYs4wFgDb2AugF8gA")
-    const [shareLinkContainer, setShareLinkContainer] = useState(true)
+    const [shareLinkContainer, setShareLinkContainer] = useState(false)
 
     const infosMolde = {
         name: "",
@@ -16,13 +16,13 @@ function ContxtComponent({children}){
         qz2: "",
         qz3: "",
         deph: "",
-        opts: [null, null, null]
+        opts: [null, null, "group"]
     }
 
     function chageInfos(currl, vall){
         console.log("data")
+        console.warn(vall.dataset.radio)
         if(vall.dataset.radio){
-            console.log(vall.dataset.radio)
             console.log(vall.value)
 
             const slw = currl.opts.map((x, index) => 
@@ -94,6 +94,32 @@ function ContxtComponent({children}){
         "Jogou Video Game",
     ])
 
+    const qz3Opts = useRef([
+        "Desafiador",
+        "Chato",
+        "Neutro",
+        "Cansativo",
+        "Diplomatico",
+        "Trabalhoso",
+        "Emocionante",
+        "Ruim",
+        "Amoroso",
+        "Responsa",
+        "Abencoado",
+        "Assitiu Series",
+        "Estudou",
+        "Trabalhou",
+        "Comemorou",
+        "Comeu",
+        // "Fez algo novo",
+        "Jogou Esportes",
+        "Assistiu Filmes",
+        "Namorou",
+        "Viajou",
+        "Desenhou",
+        "Jogou Video Game",
+    ])
+
     function createSite(){
         if(!hableToSend){
             return
@@ -113,7 +139,7 @@ function ContxtComponent({children}){
     }
 
     return(
-        <Context.Provider value={{name: infos.name, setInfos, qz1Opts, qz2Opts, hableToSend, createSite, shareLinkContainer, setShareLinkContainer, shareLink}}>
+        <Context.Provider value={{name: infos.name, setInfos, qz1Opts, qz2Opts, hableToSend, createSite, shareLinkContainer, setShareLinkContainer, shareLink, qz3Opts, icon: infos.opts[2]}}>
             {children}
         </Context.Provider>
     )

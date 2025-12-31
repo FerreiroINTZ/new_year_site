@@ -1,13 +1,14 @@
 import style from "./whatExpect.module.css"
 
-import { useContext } from "react"
+import SelectOption from "./selectOption"
+
+import { useContext, useState } from "react"
 import {Context} from "../context"
 
 function finalQuiz() {
-
-  const {setInfos} = useContext(Context)
-
-    const nome = "Gabriel Felipe"
+  const {setInfos, icon} = useContext(Context)
+  console.log(icon)
+  const [showOptions, setShowOtions] = useState(false)
 
   return (
     <section id={style.finalQuiz}>
@@ -22,8 +23,11 @@ function finalQuiz() {
               maxLength="16"
               name="qz3"
               onChange={e => setInfos(e.target)}/>
-            <img src="/icons/group.png" alt="icon"/>
+            <div id={style.icon} onClick={() => setShowOtions(true)}>
+              <img src={`/icons/all/${icon.toLowerCase()}.png`} alt="icon"/>
+            </div>
         </div>
+        {showOptions && <SelectOption close={setShowOtions}/>}
     </section>
   )
 }
