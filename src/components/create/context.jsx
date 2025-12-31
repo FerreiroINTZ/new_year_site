@@ -46,8 +46,8 @@ function ContxtComponent({children}){
             console.warn(x)
             if(x == "opts"){
                 const verify = infos.opts.filter(y => y)
-                console.warn(verify.length >= 2)
-                return verify.length >= 2
+                console.warn(verify.length >= 3)
+                return verify.length >= 3
             }else{
                 if(infos[x]){
                     return true

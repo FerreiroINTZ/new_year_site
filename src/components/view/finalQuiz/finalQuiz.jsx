@@ -1,6 +1,6 @@
 import style from "./finalQuiz.module.css"
 
-function finalQuiz({nome, texto}) {
+function finalQuiz({nome, texto, icon}) {
 
   return (
     <section id={style.finalQuiz}>
@@ -10,7 +10,7 @@ function finalQuiz({nome, texto}) {
         </div>
         <div id={style.card}>
             <p>{texto}</p>
-            <img src="/icons/group.png" alt="icon"/>
+            <img src={`/icons/all/${icon}.png`} alt="icon"/>
         </div>
     </section>
   )
