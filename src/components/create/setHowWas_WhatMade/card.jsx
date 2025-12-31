@@ -18,7 +18,7 @@ function card({label, opt}) {
           id={label}/>
         <label htmlFor={label}>
             <div className={style.checkBox}><span>x</span></div>
-            <div><img src={`/public/icons/${!opt ? "howWasIcons" : "madeMoreIcons"}/${label?.toLowerCase()}.png`}/></div>
+            <div><img src={`/icons/${!opt ? "howWasIcons" : "madeMoreIcons"}/${label?.toLowerCase()}.png`}/></div>
             <p>{label}</p>
         </label>
     </li>

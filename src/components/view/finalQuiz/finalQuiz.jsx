@@ -10,7 +10,7 @@ function finalQuiz({nome, texto, icon}) {
         </div>
         <div id={style.card}>
             <p>{texto}</p>
-            <img src={`/icons/all/${icon}.png`} alt="icon"/>
+            <img src={`/icons/all/${icon?.toLowerCase()}.png`} alt="icon"/>
         </div>
     </section>
   )
