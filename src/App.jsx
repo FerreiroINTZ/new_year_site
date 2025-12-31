@@ -21,11 +21,11 @@ function App() {
       <Hero nome={data.name} text={data.hero}/>
       <Timer />
       {/* quiz 1 */}
-      <Quiz nome={data.name} texto1={data.qz1}/>
+      <Quiz nome={data.name} texto1={data.qz1} icon={data.opts[0]}/>
       <CTA1 />
       {/* quiz 2 */}
-      <Quiz side={true} texto2={data.qz2}/>
-      <FinalQuiz nome={data.name} texto={data.qz3}/>
+      <Quiz side={true} nome={data.name} texto2={data.qz2} icon={data.opts[1]}/>
+      <FinalQuiz nome={data.name} texto={data.qz3} icon={data.opts[2]}/>
       <FinalPhrase nome={data.name} texto={data.deph}/>
       <Cta2 />
       <div id='footer'></div>

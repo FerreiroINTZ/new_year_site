@@ -7,12 +7,13 @@ const Title1 = ({nome}) =>{
 }
 
 const Title2 = ({nome}) =>{
+    console.warn(nome)
     return(
         <h3 id={style.title2}>O que <span id={style.nome}>{nome}</span> <br />mais fez em <span id={style.leter2025pt2}>2025</span></h3>
     )
 }
 
-function quiz1({side, nome, texto1, texto2}) {
+function quiz1({side, nome, texto1, texto2, icon}) {
 
     const opt = "sfddfdfdfd"
     const depoimnto = "Lorem ipsum dolor sit amet consectetur. Tellus id sapien feugiat egestas lacus facilisi turpis neque"
@@ -25,8 +26,8 @@ function quiz1({side, nome, texto1, texto2}) {
             style={{flexDirection: side ? "row-reverse" : "row"}} 
             id={style.contentWrapper}>
             <div id={style.card}>
-                <p>{opt.toUpperCase()}</p>
-                <img src="/icons/boxing.png" alt="nada" />
+                <p>{icon?.toUpperCase()}</p>
+                <img src={`/icons/${side ? "madeMoreIcons" : "howWasIcons"}/${icon?.toLowerCase()}.png`} alt="nada" />
             </div>
             <div id={style.text}>
                 <p style={{"--userName": `'${nome}'`}} id={style.depoimento}>"{side ? `${texto2}` : `${texto1}`}"</p>

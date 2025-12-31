@@ -42,7 +42,18 @@ function ContxtComponent({children}){
     useEffect(() =>{
         console.log(infos)
         const keys = Object.keys(infos)
-        const notFilled = keys.filter(x => infos[x])
+        const notFilled = keys.filter(x => {
+            console.warn(x)
+            if(x == "opts"){
+                const verify = infos.opts.filter(y => y)
+                console.warn(verify.length >= 2)
+                return verify.length >= 2
+            }else{
+                if(infos[x]){
+                    return true
+                }
+            }
+        })
         console.log("notFilled: ")
         console.log(keys.length)
         console.log(notFilled.length)
