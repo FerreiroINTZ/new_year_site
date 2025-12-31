@@ -1,0 +1,79 @@
+#setHero{
+    display: grid;
+    height: fit-content;
+    justify-items: center;
+    /* background: red; */
+    margin: 0px 375px;
+    margin-top: 100px;
+    text-align: center;
+
+    h2{
+        font-size: 40px;
+        line-height: 60px;
+
+        span{
+            font-size: 80px;
+            color: var(--yellow);
+        }
+    }
+
+    #writeContanier{
+        position: relative;
+        margin-top: 20px;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 250px;
+        max-height: 250px;
+        border-radius: 10px;
+        border: 6px solid var(--deepBlue);
+        overflow: hidden;
+        
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            rotate: 45deg;
+        }
+
+        &::after{
+            top: 25px;
+            right: -35px;
+            background: linear-gradient(
+                45deg,
+                #121328,
+                #1A1B36 18%,
+                #101125 34%,
+                #121328 49%,
+                #16172F 69%,
+                #0E0E21 79%,
+                #121328 100%);
+        }
+
+        &::before{
+            top: 0px;
+            right: -80px;
+            height: 40px;
+            background: linear-gradient(#1D1E3B 50%, #121328);
+        }
+
+        #boxIcon{
+            position: absolute;
+            left: -60px;
+            bottom: -20px;
+        }
+        
+        textarea{
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 250px;
+            max-height: 250px;
+            padding: 20px;
+            text-align: center;
+            background: none;
+            color: var(--deepBlue);
+            font-size: 40px;
+        }
+    }
+
+}
