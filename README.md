@@ -66,7 +66,7 @@ de iniciar, não depois.
 
 ## Rodando localmente
 ```bash
-git clone https://github.com/seu-usuario/new_year_site
+git clone https://github.com/ferreirointz/new_year_site
 cd new_year_site
 npm install
 npm run dev
